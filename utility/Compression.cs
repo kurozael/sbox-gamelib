@@ -1,12 +1,10 @@
-﻿using Sandbox;
-using System;
-using System.IO;
+﻿using System.IO;
 using System.IO.Compression;
 using System.Text.Json;
 
-namespace Gamelib.Network
+namespace Gamelib.Utility
 {
-	public static class RPCUtility
+	public static class Compression
 	{
 		public static byte[] Compress<T>( T data )
 		{

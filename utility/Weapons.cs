@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace Gamelib.Utility
 {
-	public static partial class WeaponUtil
+	public static partial class Weapons
 	{
 		[ClientRpc]
 		public static void PlayFlybySound( string sound )

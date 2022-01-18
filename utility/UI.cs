@@ -5,9 +5,9 @@ using System.IO;
 using System.IO.Compression;
 using System.Text.Json;
 
-namespace Gamelib.UI
+namespace Gamelib.Utility
 {
-	public static class UIUtility
+	public static class UI
 	{
 		public static float GetMinMaxDistanceAlpha( float distance, float fadeOutStart, float fadeOutEnd )
 		{

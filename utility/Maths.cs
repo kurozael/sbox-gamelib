@@ -1,9 +1,9 @@
 using System;
 using Sandbox;
 
-namespace Gamelib.Maths
+namespace Gamelib.Utility
 {
-    public static class MathUtility
+    public static class Maths
 	{
 		public static int CeilToInt( float value )
 		{

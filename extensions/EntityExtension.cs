@@ -14,11 +14,5 @@ namespace Gamelib.Extensions
 			else
 				return MathF.Max( modelSize.x, modelSize.y ) * scalar;
 		}
-
-
-		public static bool IsClientOwner( this Entity self, Client client )
-		{
-			return ( self.Client == client );
-		}
 	}
 }
