@@ -7,19 +7,19 @@ namespace Gamelib.Data
 	{
 		public IReadOnlyCollection<T> ReadOnlyList { get; private set; }
 
-		private List<T> _list;
+		private List<T> InternalList;
 
 		public HashSetList()
 		{
-			_list = new();
-			ReadOnlyList = _list.AsReadOnly();
+			InternalList = new();
+			ReadOnlyList = InternalList.AsReadOnly();
 		}
 
 		public new bool Remove( T item )
 		{
 			if ( base.Remove( item ) )
 			{
-				_list.Remove( item );
+				InternalList.Remove( item );
 				return true;
 			}
 
@@ -28,7 +28,7 @@ namespace Gamelib.Data
 
 		public new void Clear()
 		{
-			_list.Clear();
+			InternalList.Clear();
 			base.Clear();
 		}
 
@@ -36,7 +36,7 @@ namespace Gamelib.Data
 		{
 			if ( base.Add( item ) )
 			{
-				_list.Add( item );
+				InternalList.Add( item );
 				return true;
 			}
 
@@ -45,24 +45,24 @@ namespace Gamelib.Data
 
 		public void Sort( Comparison<T> comparer )
 		{
-			_list.Sort( comparer );
+			InternalList.Sort( comparer );
 		}
 
 		public new int Count
 		{
-			get { return _list.Count; }
+			get { return InternalList.Count; }
 		}
 
 		public T this[int index]
 		{
-			get { return _list[index]; }
+			get { return InternalList[index]; }
 		}
 
 		public new IEnumerator<T> GetEnumerator()
 		{
-			for ( int i = 0; i < _list.Count; i++ )
+			for ( int i = 0; i < InternalList.Count; i++ )
 			{
-				yield return _list[i];
+				yield return InternalList[i];
 			}
 		}
 	}

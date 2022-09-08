@@ -18,31 +18,31 @@ namespace Gamelib.DayNight
 			}
 		}
 
-		private GradientNode[] _nodes;
+		private GradientNode[] Nodes;
 
 		public DayNightGradient( Color dawnColor, Color dayColor, Color duskColor, Color nightColor )
 		{
-			_nodes = new GradientNode[7];
-			_nodes[0] = new GradientNode( nightColor, 0f );
-			_nodes[1] = new GradientNode( nightColor, 0.2f );
-			_nodes[2] = new GradientNode( dawnColor, 0.3f );
-			_nodes[3] = new GradientNode( dayColor, 0.5f );
-			_nodes[4] = new GradientNode( dayColor, 0.7f );
-			_nodes[5] = new GradientNode( duskColor, 0.85f );
-			_nodes[6] = new GradientNode( nightColor, 1f );
+			Nodes = new GradientNode[7];
+			Nodes[0] = new GradientNode( nightColor, 0f );
+			Nodes[1] = new GradientNode( nightColor, 0.2f );
+			Nodes[2] = new GradientNode( dawnColor, 0.3f );
+			Nodes[3] = new GradientNode( dayColor, 0.5f );
+			Nodes[4] = new GradientNode( dayColor, 0.7f );
+			Nodes[5] = new GradientNode( duskColor, 0.85f );
+			Nodes[6] = new GradientNode( nightColor, 1f );
 		}
 
 		public Color Evaluate( float fraction )
 		{
-			for ( var i = 0; i < _nodes.Length; i++ )
+			for ( var i = 0; i < Nodes.Length; i++ )
 			{
-				var node = _nodes[i];
+				var node = Nodes[i];
 				var nextIndex = i + 1;
 
-				if ( _nodes.Length < nextIndex )
+				if ( Nodes.Length < nextIndex )
 					nextIndex = 0;
 
-				var nextNode = _nodes[nextIndex];
+				var nextNode = Nodes[nextIndex];
 
 				if ( fraction >= node.Time && fraction <= nextNode.Time )
 				{
@@ -53,7 +53,7 @@ namespace Gamelib.DayNight
 				}
 			}
 
-			return _nodes[0].Color;
+			return Nodes[0].Color;
 		}
 	}
 

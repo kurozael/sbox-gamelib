@@ -5,9 +5,8 @@ namespace Gamelib.DayNight
 {
 
 	/// <summary>
-	/// Sets the skin of a model depending on if it's day time or night time, example: A street lamp turning on and night time then turning off in the morning
+	/// Sets the skin of a model depending on if it's day time or night time, example: a street lamp turning on and night time then turning off in the morning.
 	/// </summary>
-
 	[Library( "daynight_prop" )]
 	[Title( "Day and Night Prop" )]
 	[Model( Model = "", MaterialGroup = "default" )]

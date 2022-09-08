@@ -7,7 +7,6 @@ namespace Gamelib.DayNight
 	/// <summary>
 	/// A way to play sounds during the day night cycle, this also allows you to play a looping sound between 2 time periods e.g. 5pm to 6pm. You can also set the sound to only place once.
 	/// </summary>
-
 	[Library( "daynight_sound" )]
 	[Title( "Day and Night Sound" )]
 	[EditorSprite("editor/daynight_sound.vmat")]

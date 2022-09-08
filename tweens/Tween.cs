@@ -21,7 +21,6 @@ namespace Gamelib.Tweens
 		public int RemainingRuns { get; protected set; }
 		public bool IsReversing { get; protected set; }
 
-
 		public Tween()
 		{
 			RemainingRuns = 1;

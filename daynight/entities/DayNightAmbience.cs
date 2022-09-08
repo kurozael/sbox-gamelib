@@ -5,7 +5,7 @@ using SandboxEditor;
 namespace Gamelib.DayNight
 {
 	/// <summary>
-	/// An audio controller for when a looping sound should play at each point in the day
+	/// An audio controller for when a looping sound should play at each point in the day.
 	/// </summary>
 	/// 
 	[Library( "daynight_ambience" )]

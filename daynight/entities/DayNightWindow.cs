@@ -5,9 +5,8 @@ using System.Threading.Tasks;
 namespace Gamelib.DayNight
 {
 	/// <summary>
-	/// A brush entity that will enable and disable at random times during the morning and night time
+	/// A brush entity that will enable and disable at random times during the morning and night time.
 	/// </summary>
-
 	[Library( "daynight_window" )]
 	[Title( "Day and Night Brush" )]
 	[Solid]
