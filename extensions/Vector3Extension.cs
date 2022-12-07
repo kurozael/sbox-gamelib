@@ -48,7 +48,7 @@ namespace Gamelib.Extensions
 
 		public static float DistanceToRay( this Vector3 self, Ray ray )
 		{
-			return Vector3.Cross( ray.Direction, self - ray.Origin ).Length;
+			return Vector3.Cross( ray.Forward, self - ray.Position ).Length;
 		}
 
 		public static Vector3 Project( this Vector3 self, Matrix world, Matrix projection )

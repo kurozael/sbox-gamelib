@@ -8,7 +8,7 @@ namespace Gamelib.Extensions
 	{
 		public static Client ByPlayerId( this IReadOnlyList<Client> self, long playerId )
 		{
-			return self.FirstOrDefault( p => p.PlayerId == playerId );
+			return self.FirstOrDefault( p => p.SteamId == playerId );
 		}
 	}
 }
