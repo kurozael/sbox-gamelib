@@ -6,7 +6,7 @@ namespace Gamelib.Extensions
 {
 	public static class ClientExtensions
 	{
-		public static Client ByPlayerId( this IReadOnlyList<Client> self, long playerId )
+		public static IClient ByPlayerId( this IReadOnlyList<IClient> self, long playerId )
 		{
 			return self.FirstOrDefault( p => p.SteamId == playerId );
 		}
